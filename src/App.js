@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Link } from 'react-router-dom';
+import Home from './component/Home';
+import AvengerList from './component/AvengerList';
+import AvengerPage from './component/AvengerPage';
+// import avengers from './Data';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <ul className='navbar'>
+        <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/avengers'>Avengers</Link>
+        </li>
+      </ul>
+
+      <Route exact path='/' component={Home} />
+      <Route exact path='/avengers' component={AvengerList} />
+      <Route path='/avengers/:id' component={AvengerPage} />
     </div>
   );
 }
