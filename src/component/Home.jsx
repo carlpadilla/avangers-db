@@ -24,7 +24,7 @@ const Home = () => {
       />
       <h4>Classified information</h4>
       <Button variant='contained' color='secondary' className={classes.button}>
-        <Link to='/avengers' style={{ textDecoration: 'none' }}>
+        <Link to='/avengers' style={{ textDecoration: 'none', color: 'black' }}>
           Enter!
         </Link>
       </Button>
