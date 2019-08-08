@@ -1,10 +1,10 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import avengers from '../Data';
+// import avengers from '../Data';
 
 const AvengerPage = props => {
   const id = props.match.params.id;
-  const avenger = avengers.find(avenger => `${avenger.id}` === id);
+  const avenger = props.avengers.find(avenger => `${avenger.id}` === id);
 
   return (
     <div>
